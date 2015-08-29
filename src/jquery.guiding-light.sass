@@ -1,0 +1,176 @@
+$fg_base_color: #333
+$bg_base_color: lighten(#ffe4c4, 5) //bisque
+$next_color: #19ba76
+$back_color: #ba1919
+$terminal_highlight_color: #00f5ff
+
+
+$fg_title_color: adjust-color($fg_base_color, 40)
+$border_color: lighten($fg_title_color, 30)
+$border_light_color: lighten($fg_title_color, 50)
+$bg_color: $bg_base_color
+$bg_light_color: lighten($bg_base_color, 10)
+$bg_orig_color: darken($bg_base_color, 5)
+$bg_dark_color: darken($bg_base_color, 10)
+$next_light_color: darken($next_color, 5)
+$back_light_color: darken($back_color, 5)
+
+@mixin bg($top, $bottom: null)
+    @if $bottom
+        $bottom: $bottom
+    @else
+        $bottom: darken($top, 5)
+    background: $top;
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+    
+@mixin animation($animations) 
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+
+
+@mixin keyframes($animationName)
+    @-webkit-keyframes #{$animationName} 
+        @content;
+    @-moz-keyframes #{$animationName} 
+        @content;
+    @-o-keyframes #{$animationName} 
+        @content;
+    @keyframes #{$animationName} 
+        @content;
+
+.cgl-container
+    text-align: center
+    h2
+        font-size: 36px
+        color: $fg_title_color
+        
+    .cgl-section
+        padding: 10px 0 20px 0
+        hr
+            height: 1px
+            background-color: $bg_light_color
+            border-top: 1px solid $border_light_color
+            border-left: none
+            border-right: none
+            border-bottom: none
+            margin: 15px 10px
+        .cgl-order
+            color: $border_light_color
+            background-color: $bg_orig_color
+            margin: 0 auto
+            padding: 5px
+            font-size: 16px
+            display: inline
+            position: relative
+            top: 24px
+        @mixin nav-btn($color, $highlight_color)
+            display: inline-block
+            @include bg($color)
+            border-radius: 4px
+            color: #f4f4f4
+            padding: 10px 20px
+            margin: 10px 20px
+            cursor: pointer
+            &:hover
+                @include bg($highlight_color)
+        .cgl-prev
+            @include nav-btn($back_color, $back_light_color)
+        .cgl-next
+            @include nav-btn($next_color, $next_light_color)
+        p
+            text-align: left
+        img
+            max-width: 90%
+            margin: 25px auto
+            border-radius: 4px
+            box-shadow: 0 20px 40px -10px #555
+            &.no-shadow
+                box-shadow: none
+                margin: 10px auto
+        
+    .cgl-block-option
+        transition: all 0.2s
+        display: inline-block
+        @include bg($bg_color)
+        border: 1px solid $border_color
+        border-radius: 4px
+        width: 120px
+        padding: 20px 10px
+        margin: 20px 10px
+        cursor: pointer
+        &:hover, &.active
+            @include bg($bg_orig_color)
+        &.disabled
+            cursor: not-allowed
+        &.large
+            width: 300px
+        img
+            height: 100px
+            padding: 10px 0
+            max-width: auto
+            margin: 0
+            border-radius: 0
+            box-shadow: none
+        
+.cgl-key
+    border: 1px solid #aaa
+    background-color: #eee
+    color: #111
+    box-shadow: 0 1px 0 #bbb
+    border-radius: 2px
+    padding: 0 2px
+    
+.cgl-code
+    font-family: consolas, monospace, san-serif
+    border: 1px solid $fg_title_color
+    border-radius: 2px
+    background-color: $bg_light_color
+    padding: 1px 6px
+    
+.cgl-terminal
+    font-family: consolas, monospace, san-serif
+    text-align: left
+    padding: 5px 10px
+    margin: 25px auto
+    background-color: #333
+    border-top: 30px solid #eee
+    border-left: 1px solid #eee
+    border-right: 1px solid #eee
+    border-bottom: 1px solid #eee
+    border-radius: 4px
+    box-shadow: 0 20px 40px -10px #555
+    color: #eee
+    overflow: hidden
+    
+@include keyframes('terminal-highlight')
+    0%
+        color: #eee
+    50%
+        color: $terminal_highlight_color
+    100%
+        color: #eee
+.cgl-terminal-highlight
+    @include animation(terminal-highlight 1s infinite)
+        
+.cgl-quote
+    border-left: 2px solid $fg_title_color
+    text-align: left
+    padding: 10px 0 10px 10px
+    margin: 5px 20px
+    background-color: $bg_base_color
+    
+.cgl-tick
+    font-size: 180px
+    color: #fff
+    @include bg(#00eb9a)
+    width: 200px
+    height: 200px
+    border-radius: 100px
+    margin: 20px auto

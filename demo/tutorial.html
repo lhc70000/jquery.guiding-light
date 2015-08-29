@@ -1,0 +1,236 @@
+<div id="index">
+    <h2>Please choose your operating system</h2>
+    <div class="cgl-block-option" data-target="^#win" data-value="windows" data-img="img/win.png">Windows</div>
+    <div class="cgl-block-option" data-target="^#osx-device" data-value="osx" data-img="img/osx.png">OS X</div>
+    <div class="cgl-block-option" data-target="#linux" data-value="linux" data-img="img/linux.png">Linux</div>
+</div>
+
+<!-- windows get mac -->
+
+<div id="win">
+    <h2>Please choose your Windows version</h2>
+    <div class="cgl-block-option" data-target="#win7-up-mac-0" data-value="windows-xp">Windows XP</div>
+    <div class="cgl-block-option" data-target="#win7-up-mac-0" data-value="windows-7">Windows 7</div>
+    <div class="cgl-block-option" data-target="#win7-up-mac-0" data-value="windows-8">Windows 8</div>
+    <div class="cgl-block-option" data-target="#win7-up-mac-0" data-value="windows-10">Windows 10</div>
+</div>
+
+<div id="win7-up-mac-0" data-target="#win7-up-mac-1">
+    <h2>Get MAC address of your PC</h2>
+    <p>Press <span class="cgl-key">Win</span> + <span class="cgl-key">R</span> to open "Run" window.</p>
+    <p>Type "cmd" and press <span class="key">Enter</span>.</p>
+    <img src="img/win_run.png" width="401" alt="Run">
+    <p>You should see the black command prompt window.</p>
+</div>
+
+<div id="win7-up-mac-1" data-target="#open-ncm" data-new-page="true">
+    <h2>Find your ethernet MAC</h2>
+    <p>Type <span class="cgl-code">getmac /v</span> in the command prompt window and press <span class="cgl-key">Enter</span>. It should return you a list of adapters.</p>
+    <pre class="cgl-terminal">
+Microsoft Windows [版本 10.0.10525]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\admin>getmac /v
+
+连接名           网络适配器       物理地址             传输名称
+=============== =============== =================== ==========================================================
+<span class="cgl-terminal-highlight">以太网</span>           Intel(R) PRO/10 <span class="cgl-terminal-highlight">00-1C-42-XX-XX-XX</span>   \Device\Tcpip_{5EB740D5-76B4-46D7-A93B-XXXXXXXXXXXX}
+
+C:\Users\admin>_
+    </pre>
+    <p>As highlighted in the figure, find "Ethernet" or "以太网" or "乙太網絡" in the list, and the string under "Physical address" column is your MAC address. <b><u>Remember it CORRECTLY!</u></b></p>
+</div>
+
+<!-- Linux get mac -->
+
+<div id="linux" data-target="#open-ncm" data-new-page="true">
+    <h2>Get MAC address of your Linux device</h2>
+    <p>Open terminal.</p>
+    <p>Type 'ifconfig' and press <span class="cgl-key">Enter</span>.</p>
+    <pre class="cgl-terminal">
+user@computer:~$ ifconfig
+<span class="cgl-terminal-highlight">eth0</span>      Link encap:Ethernet  <span class="cgl-terminal-highlight">HWaddr 00:1c:42:xx:xx:xx</span>  
+          inet addr:10.111.111.111  Bcast:10.111.111.255  Mask:255.255.255.0
+          inet6 addr: fdb2:2c26:f4e4:0:xxxx:xxxx:xxxx:xxxx/64 Scope:Global
+          inet6 addr: fdb2:2c26:f4e4:0:xxxx:xxxx:xxxx:xxxx/64 Scope:Global
+          inet6 addr: fe80::21c:42ff:fe07:f6f8/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1000  Metric:1
+          RX packets:100 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:101 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:9314 (9.3 KB)  TX bytes:15671 (15.6 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:100 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:100 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:24050 (24.0 KB)  TX bytes:24050 (24.0 KB)
+
+user@computer:~$ 
+    </pre>
+    <p>As shown in the figure, your ethernet MAC address should be in "eth**" section, and to the right of "HWaddr". <b><u>Remember it CORRECTLY!</u></b></p>
+</div>
+
+<!-- OSX get mac -->
+
+<div id="osx-device">
+    <h2>Please choose your OS X device</h2>
+    <div class="cgl-block-option large" data-target="^#osx-warn-adapter" data-value="osx-without-ethernet">
+        MacBook, MacBook Air or MacBook Pro with Retina Display<br/><br/>
+        <small>These devices don't have ethernet ports. Most MacBooks you can buy today belong to this type.</small>
+    </div>
+    <div class="cgl-block-option large" data-target="#osx-mac-0" data-value="osx-with-ethernet">
+        Old MacBook Pro, Mac mini or Mac Pro<br/><br/>
+        <small>These devices have ethernet ports, including those old and thick MacBooks and Mac desktop models.</small>
+    </div>
+</div>
+
+<div id="osx-warn-adapter" data-target="#osx-mac-0" data-new-page="true">
+    <h2>Your Mac device doesn't have an ethernet port</h2>
+    <p>Seems that your Mac device doesn't have an ethernet port, and you need an adapter. Why not buying a Thunderbolt to Gigabit Ethernet Adapter from <a href="http://www.apple.com/hk/shop/product/MD463ZM/A/thunderbolt-to-gigabit-ethernet-adapter">Apple online store</a>?</p>
+    <p>Or if you have a new MacBook, you need an Apple USB Ethernet Adapter and a USB-C to USB Adapter, which brings inconvenience. In this case, I suggest you setup Wi-Fi in your room.</p>
+</div>
+
+<div id="osx-mac-0" data-target="#osx-mac-1">
+    <h2>Get MAC address of your OS X device</h2>
+    <p>Open System Preference</p>
+    <img src="img/mac_apple.png" width="233" alt="Open System Preference"/>
+    <p>Choose "Internet"</p>
+    <img src="img/mac_sp.png" class="no-shadow" width="780" alt="Choose Internet">
+</div>
+
+<div id="osx-mac-1" data-target="#open-ncm" data-new-page="true">
+    <h2>Choose your ethernet adapter</h2>
+    <div data-for="osx-without-ethernet">
+        <p>Plug in your Thunderbolt or USB Adapter. After seeing your adapter appears in the list at left, choose your adapter.</p>
+    </div>
+    <div data-for="osx-with-ethernet">
+        <p>Select your Ethernet Adapter from the list at left.</p>
+    </div>
+    <img src="img/mac_net.png" class="no-shadow" alt="Select your Ethernet Adapter">
+    <p>Press "Advanced..." button at right-bottom corner.</p>
+    <img src="img/mac_hardware.png" class="no-shadow" alt="Hardware">
+    <p>Under "Hardware" tab, you are able to see your MAC Address. <b><u>Remember it CORRECTLY!</u></b></p>
+</div>
+
+<!-- NCM -->
+
+<div id="open-ncm" data-target="#choose-residence" data-new-page="true">
+    <h2>Login CityU NCM</h2>
+    <p>Find any Wi-Fi access in CityU (usually common room). Open CityU NCM (<a href="https://www6.cityu.edu.hk/ncm/" target="_blank">https://www6.cityu.edu.hk/ncm/</a>) and login with your CityU Student EID and password.
+    </p>
+    <img src="img/ncm_index.png" alt="NCM index page">
+</div>
+
+<div id="choose-residence" data-target="#form-0" data-new-page="true">
+    <h2>Choose "Connection in Residence"</h2>
+    <p>Choose "Connection in Residence" in left menu.</p>
+    <img src="img/left_menu.png" width="238" alt="Choose Connection in Residence" />
+    <p>You should be required to agree their terms. If you have read and agree with it, check the checkbox and continue.</p>
+</div>
+
+<div id="form-0" data-target="#form-1">
+    <h2>Fill the form</h2>
+    <p>You should see a form at the right.</p>
+    <img src="img/form.png" width="811" alt="Form" />
+    <p>Please confirm the correctness of your "Residence Location" and "Contact Phone Number".</p>
+</div>
+
+<div id="form-1" data-target="#form-2">
+    <h2>Network Card Address and Network Card Ownership</h2>
+    <p>In "Network Card Address" section, fill in your MAC address after <b><u>double checking</u></b>.</p>
+    <div class="cgl-quote"><table width="100%"><tbody>
+        <tr>
+          <td width="38%" height="28"><font class="text14">*Network Card Address:</font></td>
+          <td width="62%" height="28">
+            <input name="MAC1" size="2" maxlength="2" value="00" style="font-family: Arial;  font-size: 11pt; width: 30px" type="text">-
+            <input name="MAC2" size="2" maxlength="2" value="1C" style="font-family: Arial;  font-size: 11pt; width: 30px" type="text">-
+            <input name="MAC3" size="2" maxlength="2" value="42" style="font-family: Arial;  font-size: 11pt; width: 30px" type="text">-
+            <input name="MAC4" size="2" maxlength="2" value="XX" style="font-family: Arial;  font-size: 11pt; width: 30px" type="text">-
+            <input name="MAC5" size="2" maxlength="2" value="XX" style="font-family: Arial;  font-size: 11pt; width: 30px" type="text">-
+            <input name="MAC6" size="2" maxlength="2" value="XX" style="font-family: Arial;  font-size: 11pt; width: 30px" type="text">
+        </tr>
+    </tbody></table></div>
+    <p>In "Network Card Ownership" section, choose "Self-Owned".</p>
+    <div class="cgl-quote"><table width="100%"><tbody><tr>
+          <td width="38%" height="28"><font class="text14">*Network Card Ownership:</font></td>
+          <td width="62%" height="28"><select size="1" name="p_NetcardOwner">
+              <option value="Self">Self-Owned</option>
+          </select></td></tr>
+    </tbody></table></div>
+</div>
+
+<div id="form-2" data-target="#after-submit" data-new-page="true">
+    <h2>Outlet ID and Other Options</h2>
+    <p>In "Outlet ID" section, choose whether your bed is at left or right.</p>
+    <div class="cgl-quote"><table width="100%"><tbody><tr>
+          <td width="32%"><font class="text14">*Outlet ID:</font></td>
+          <td width="68%"><select name="p_outlet_id" size="1">
+          <option value="14SR05-4C">10SR00-4C RIGHT</option>
+            </select></td>
+        </tr></tbody></table>
+    </div>
+    <img src="img/outlet.png" width="205" alt="Outlet ID">
+    <p>In "Machine Type" section, choose "PC".</p>
+    <div class="cgl-quote"><table width="100%">
+        <tbody><tr><td width="32%" height="27"><font class="text14">*Machine Type:</font></td>
+        <td width="68%" height="27">
+        <select name="p_machine_type" size="1">
+        <option value="PC">PC</option>
+        </select></td></tr></tbody>
+    </table></div>
+    <p>In "OS Type" section, you can choose <b><u>any one</u></b> of them and it doesn't affect your Internet application. But for convience, I suggest you to choose "
+        <span data-for="windows-xp">WINDOWS XP</span>
+        <span data-for="windows-7">WINDOWS 7</span>
+        <span data-for="windows-8">WINDOWS 8</span>
+        <span data-for="windows-10">WINDOWS 10</span>
+        <span data-for="osx">MAC OS</span>
+        <span data-for="linux">LINUX</span>
+        " which should be your OS type.
+    </p>
+    <p>For "Version", you can fill anything in it and it doesn't affect your Internet application. For example, "10".</p>
+    <div class="cgl-quote">
+        <table width="100%"><tbody><tr>
+          <td width="32%" height="28"><font class="text14">*OS Type:</font></td>
+          <td width="68%" height="28">
+            <select name="p_OS" size="1">
+                <option value=""></option>
+                <option>WINDOWS XP</option>
+                <option>WINDOWS 7</option>
+                <option>WINDOWS 8</option>
+                <option>WINDOWS 10</option>
+                <option>MAC OS</option>
+                </select> <font class="text14"> Version&nbsp;</font><input name="p_OSVersion" value="10" size="10" maxlength="32" type="text">
+          </td>
+    </tr></tbody></table>
+    </div>
+    <p>Leave blank for "Remarks".</p>
+    <div class="cgl-quote"><table width="100%"><tbody><tr>
+      <td width="32%"><font class="text14">Remarks:</font></td>
+      <td width="68%">
+        <input name="p_Remarks" value="" size="50" type="text">
+      </td>
+    </tr></tbody></table></div>
+    <p>Make sure you filled in all blanks with "*". Submit the form.</p>
+</div>
+
+<div id="after-submit" data-target="#finish" data-new-page="true">
+    <h2>After Submission</h2>
+    <p>You will receive an email indicating that CityU received your application. All you need to do is wait. Normally, it takes no more than few hours to get your network works.</p>
+    <h2>Connect your network cable</h2>
+    <p>You are supposed to have a network cable. If not, just buy one from homey kitchen.</p>
+    <p>If you are at the side with telephone, please connect one side of the cable to the telephone. If not, plug one side of the cable in the LAN port on the wall directly.</p>
+    <p data-for="osx-without-ethernet">Connect your USB or Thunderbolt Ethernet Adapter first. Plug the other side of the cable in your adapter.</p>
+    <p data-not-for="osx-without-ethernet">Plug the other side of the cable in your computer's ethernet port.</p>
+    <img src="img/cable.png" width="354" alt="Cable">
+    <p>Test the connection after few hours.</p>
+</div>
+
+<div id="finish">
+    <h2>Congrats, you finished!</h2>
+    <div class="cgl-tick">✓</div>
+    <p>Should you have any questions, please check troubleshot page.</p>
+</div>

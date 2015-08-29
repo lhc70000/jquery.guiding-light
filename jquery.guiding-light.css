@@ -1,0 +1,228 @@
+/* line 48, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-container {
+  text-align: center; }
+  /* line 50, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+  .cgl-container h2 {
+    font-size: 36px;
+    color: #5b3333; }
+  /* line 54, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+  .cgl-container .cgl-section {
+    padding: 10px 0 20px 0; }
+    /* line 56, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-section hr {
+      height: 1px;
+      background-color: white;
+      border-top: 1px solid #d6b7b7;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      margin: 15px 10px; }
+    /* line 64, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-section .cgl-order {
+      color: #d6b7b7;
+      background-color: bisque;
+      margin: 0 auto;
+      padding: 5px;
+      font-size: 16px;
+      display: inline;
+      position: relative;
+      top: 24px; }
+    /* line 83, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-section .cgl-prev {
+      display: inline-block;
+      background: #ba1919;
+      background: -moz-linear-gradient(top, #ba1919 0%, #a41616 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ba1919), color-stop(100%, #a41616));
+      background: -webkit-linear-gradient(top, #ba1919 0%, #a41616 100%);
+      background: -o-linear-gradient(top, #ba1919 0%, #a41616 100%);
+      background: -ms-linear-gradient(top, #ba1919 0%, #a41616 100%);
+      background: linear-gradient(to bottom, #ba1919 0%, #a41616 100%);
+      border-radius: 4px;
+      color: #f4f4f4;
+      padding: 10px 20px;
+      margin: 10px 20px;
+      cursor: pointer; }
+      /* line 81, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+      .cgl-container .cgl-section .cgl-prev:hover {
+        background: #a41616;
+        background: -moz-linear-gradient(top, #a41616 0%, #8d1313 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a41616), color-stop(100%, #8d1313));
+        background: -webkit-linear-gradient(top, #a41616 0%, #8d1313 100%);
+        background: -o-linear-gradient(top, #a41616 0%, #8d1313 100%);
+        background: -ms-linear-gradient(top, #a41616 0%, #8d1313 100%);
+        background: linear-gradient(to bottom, #a41616 0%, #8d1313 100%); }
+    /* line 85, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-section .cgl-next {
+      display: inline-block;
+      background: #19ba76;
+      background: -moz-linear-gradient(top, #19ba76 0%, #16a468 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #19ba76), color-stop(100%, #16a468));
+      background: -webkit-linear-gradient(top, #19ba76 0%, #16a468 100%);
+      background: -o-linear-gradient(top, #19ba76 0%, #16a468 100%);
+      background: -ms-linear-gradient(top, #19ba76 0%, #16a468 100%);
+      background: linear-gradient(to bottom, #19ba76 0%, #16a468 100%);
+      border-radius: 4px;
+      color: #f4f4f4;
+      padding: 10px 20px;
+      margin: 10px 20px;
+      cursor: pointer; }
+      /* line 81, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+      .cgl-container .cgl-section .cgl-next:hover {
+        background: #16a468;
+        background: -moz-linear-gradient(top, #16a468 0%, #138d59 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #16a468), color-stop(100%, #138d59));
+        background: -webkit-linear-gradient(top, #16a468 0%, #138d59 100%);
+        background: -o-linear-gradient(top, #16a468 0%, #138d59 100%);
+        background: -ms-linear-gradient(top, #16a468 0%, #138d59 100%);
+        background: linear-gradient(to bottom, #16a468 0%, #138d59 100%); }
+    /* line 87, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-section p {
+      text-align: left; }
+    /* line 89, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-section img {
+      max-width: 90%;
+      margin: 25px auto;
+      border-radius: 4px;
+      box-shadow: 0 20px 40px -10px #555; }
+      /* line 94, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+      .cgl-container .cgl-section img.no-shadow {
+        box-shadow: none;
+        margin: 10px auto; }
+  /* line 98, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+  .cgl-container .cgl-block-option {
+    transition: all 0.2s;
+    display: inline-block;
+    background: #fff0dd;
+    background: -moz-linear-gradient(top, #fff0dd 0%, bisque 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff0dd), color-stop(100%, bisque));
+    background: -webkit-linear-gradient(top, #fff0dd 0%, bisque 100%);
+    background: -o-linear-gradient(top, #fff0dd 0%, bisque 100%);
+    background: -ms-linear-gradient(top, #fff0dd 0%, bisque 100%);
+    background: linear-gradient(to bottom, #fff0dd 0%, bisque 100%);
+    border: 1px solid #b27575;
+    border-radius: 4px;
+    width: 120px;
+    padding: 20px 10px;
+    margin: 20px 10px;
+    cursor: pointer; }
+    /* line 108, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-block-option:hover, .cgl-container .cgl-block-option.active {
+      background: bisque;
+      background: -moz-linear-gradient(top, bisque 0%, #ffd8ab 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, bisque), color-stop(100%, #ffd8ab));
+      background: -webkit-linear-gradient(top, bisque 0%, #ffd8ab 100%);
+      background: -o-linear-gradient(top, bisque 0%, #ffd8ab 100%);
+      background: -ms-linear-gradient(top, bisque 0%, #ffd8ab 100%);
+      background: linear-gradient(to bottom, bisque 0%, #ffd8ab 100%); }
+    /* line 110, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-block-option.disabled {
+      cursor: not-allowed; }
+    /* line 112, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-block-option.large {
+      width: 300px; }
+    /* line 114, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+    .cgl-container .cgl-block-option img {
+      height: 100px;
+      padding: 10px 0;
+      max-width: auto;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none; }
+
+/* line 122, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-key {
+  border: 1px solid #aaa;
+  background-color: #eee;
+  color: #111;
+  box-shadow: 0 1px 0 #bbb;
+  border-radius: 2px;
+  padding: 0 2px; }
+
+/* line 130, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-code {
+  font-family: consolas, monospace, san-serif;
+  border: 1px solid #5b3333;
+  border-radius: 2px;
+  background-color: white;
+  padding: 1px 6px; }
+
+/* line 137, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-terminal {
+  font-family: consolas, monospace, san-serif;
+  text-align: left;
+  padding: 5px 10px;
+  margin: 25px auto;
+  background-color: #333;
+  border-top: 30px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 20px 40px -10px #555;
+  color: #eee;
+  overflow: hidden; }
+
+@-webkit-keyframes terminal-highlight {
+  0% {
+    color: #eee; }
+  50% {
+    color: #00f5ff; }
+  100% {
+    color: #eee; } }
+
+@-moz-keyframes terminal-highlight {
+  0% {
+    color: #eee; }
+  50% {
+    color: #00f5ff; }
+  100% {
+    color: #eee; } }
+
+@-o-keyframes terminal-highlight {
+  0% {
+    color: #eee; }
+  50% {
+    color: #00f5ff; }
+  100% {
+    color: #eee; } }
+
+@keyframes terminal-highlight {
+  0% {
+    color: #eee; }
+  50% {
+    color: #00f5ff; }
+  100% {
+    color: #eee; } }
+
+/* line 159, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-terminal-highlight {
+  -webkit-animation: terminal-highlight 1s infinite;
+  -moz-animation: terminal-highlight 1s infinite;
+  -o-animation: terminal-highlight 1s infinite;
+  animation: terminal-highlight 1s infinite; }
+
+/* line 162, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-quote {
+  border-left: 2px solid #5b3333;
+  text-align: left;
+  padding: 10px 0 10px 10px;
+  margin: 5px 20px;
+  background-color: #fff0dd; }
+
+/* line 169, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+.cgl-tick {
+  font-size: 180px;
+  color: #fff;
+  background: #00eb9a;
+  background: -moz-linear-gradient(top, #00eb9a 0%, #00d289 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00eb9a), color-stop(100%, #00d289));
+  background: -webkit-linear-gradient(top, #00eb9a 0%, #00d289 100%);
+  background: -o-linear-gradient(top, #00eb9a 0%, #00d289 100%);
+  background: -ms-linear-gradient(top, #00eb9a 0%, #00d289 100%);
+  background: linear-gradient(to bottom, #00eb9a 0%, #00d289 100%);
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 20px auto; }
+
+/*# sourceMappingURL=jquery.guiding-light.css.map */

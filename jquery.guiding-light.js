@@ -9,14 +9,15 @@ by lhc (lhc199652 at gmail.com)
   (function($) {
     var GuidingLight;
     GuidingLight = (function() {
-      function GuidingLight(container) {
-        this.container = container != null ? container : $('.cgl-container', this.doc);
+      function GuidingLight(container, doc) {
+        this.container = container != null ? container : $('.cgl-container');
+        this.doc = doc;
         this.history = [];
         this.log = [];
         if (this.container.length !== 1) {
           throw new Error('Guiding Light: Too many container object!');
         }
-        this.container.empty();
+        this.container.empty().addClass('cgl-container');
         if (this.doc = this.doc || this.container.data('cgl-doc')) {
           this.load('#index');
         } else {
@@ -137,11 +138,15 @@ by lhc (lhc199652 at gmail.com)
       return GuidingLight;
 
     })();
-    jQuery.fn.guidingLight = function() {
+    jQuery.fn.guidingLight = function(options) {
+      if (options == null) {
+        options = {};
+      }
       return this.each(function() {
         var container, doc;
         container = $(this);
-        doc = container.data('cgl-doc');
+        doc = options.doc || container.data('cgl-doc');
+        console.log(doc);
         return new GuidingLight(container, doc);
       });
     };

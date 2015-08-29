@@ -107,13 +107,13 @@
     cursor: pointer; }
     /* line 108, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
     .cgl-container .cgl-block-option:hover, .cgl-container .cgl-block-option.active {
-      background: bisque;
-      background: -moz-linear-gradient(top, bisque 0%, #ffd8ab 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, bisque), color-stop(100%, #ffd8ab));
-      background: -webkit-linear-gradient(top, bisque 0%, #ffd8ab 100%);
-      background: -o-linear-gradient(top, bisque 0%, #ffd8ab 100%);
-      background: -ms-linear-gradient(top, bisque 0%, #ffd8ab 100%);
-      background: linear-gradient(to bottom, bisque 0%, #ffd8ab 100%); }
+      background: #ffd8ab;
+      background: -moz-linear-gradient(top, #ffd8ab 0%, #ffcd91 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd8ab), color-stop(100%, #ffcd91));
+      background: -webkit-linear-gradient(top, #ffd8ab 0%, #ffcd91 100%);
+      background: -o-linear-gradient(top, #ffd8ab 0%, #ffcd91 100%);
+      background: -ms-linear-gradient(top, #ffd8ab 0%, #ffcd91 100%);
+      background: linear-gradient(to bottom, #ffd8ab 0%, #ffcd91 100%); }
     /* line 110, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
     .cgl-container .cgl-block-option.disabled {
       cursor: not-allowed; }

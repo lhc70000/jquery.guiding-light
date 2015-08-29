@@ -9,13 +9,13 @@ by lhc (lhc199652 at gmail.com)
 do ($ = jQuery) ->
 
     class GuidingLight
-        constructor: (@container = $ '.cgl-container', @doc) ->
+        constructor: (@container = $('.cgl-container'), @doc) ->
             @history = []
             @log = []
             # only one element for one object
             if @container.length != 1
                 throw new Error('Guiding Light: Too many container object!')
-            @container.empty()
+            @container.empty().addClass('cgl-container')
             # load index
             if @doc = @doc || @container.data 'cgl-doc'
                 @load('#index')
@@ -93,12 +93,12 @@ do ($ = jQuery) ->
             else
                 [t, true]
 
-    jQuery.fn.guidingLight = ->
-        # console.log this
+    jQuery.fn.guidingLight = (options = {}) ->
         this.each ->
             container = $ this
-            doc = container.data 'cgl-doc'
-            new GuidingLight container, doc
+            doc = options.doc || container.data 'cgl-doc'
+            console.log doc
+            new GuidingLight(container, doc)
             
     $(document).ready ->
         $('.cgl-container').guidingLight()

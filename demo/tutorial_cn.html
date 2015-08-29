@@ -1,0 +1,238 @@
+<div id="index">
+<h2>请选择你的操作系统</h2>
+<div class="cgl-block-option"data-target="^#win"data-value="windows"data-img="img/win.png"> Windows</div>
+<div class="cgl-block-option"data-target="^#osx-device"data-value="osx"data-img="img/osx.png"> OS X</div>
+<div class="cgl-block-option"data-target="#linux"data-value="linux"data-img="img/linux.png"> Linux</div>
+</div>
+
+<!-- windows 获得 mac-->
+
+<div id="win">
+<h2>请选择你的 Windows 版本</h2>
+<div class="cgl-block-option"data-target="#win7-up-mac-0"data-value="windows-xp">Windows XP</div>
+<div class="cgl-block-option"data-target="#win7-up-mac-0"data-value="windows-7">Windows 7</div>
+<div class="cgl-block-option"data-target="#win7-up-mac-0"data-value="windows-8">Windows 8</div>
+<div class="cgl-block-option"data-target="#win7-up-mac-0"data-value="windows-10">Windows 10</div>
+</div>
+
+<div id="win7-up-mac-0"data-target="#win7-up-mac-1">
+<h2>获取你 PC 的 MAC 地址</h2>
+<p>按 <span class="cgl-key"> Win</span> + <span class="cgl-key"> R</span> 打开"运行"窗口.</p>
+<p>键入"cmd"并按 <span class="key"> Enter</span>。</p>
+<img src="img/win_run.png"width="401"alt="Run">
+<p>你应该会看到黑色的命令提示符窗口。</p>
+</div>
+
+<div id="win7-up-mac-1"data-target="#open-ncm"data-new-page="true">
+<h2>找到你的以太网 MAC 地址</h2>
+<p>在命令提示符窗口中键入 <span class="cgl-code"> getmac /v</span>，然后按 <span class="cgl-key"> Enter</span>。它应该返回你的网络适配器列表。</p>
+<pre class="cgl-terminal">
+Microsoft Windows [版本 10.0.10525]
+(c) 2015 Microsoft Corporation. All rights reserved.
+
+C:\Users\admin>getmac /v
+
+连接名           网络适配器       物理地址             传输名称
+=============== =============== =================== ==========================================================
+<span class="cgl-terminal-highlight">以太网</span>           Intel(R) PRO/10 <span class="cgl-terminal-highlight">00-1C-42-XX-XX-XX</span>   \Device\Tcpip_{5EB740D5-76B4-46D7-A93B-XXXXXXXXXXXX}
+
+C:\Users\admin>_
+</pre>
+<p>如图所示，在列表中，找到"Ethernet"或"以太网"或"乙太網絡"，其"物理地址"下的字符串是你的 MAC 地址。<b><u>请把它记下来并检查一遍!</u></b></p>
+</div>
+
+<!-- Linux 得到 mac-->
+
+<div id="linux"data-target="#open-ncm"data-new-page="true">
+<h2>获取你 Linux 设备的 MAC 地址</h2>
+<p>打开终端（Terminal）。</p>
+<p>键入 <span class="cgl-code">ifconfig</span> 并按 <span class="cgl-key"> Enter</span>。</p>
+<pre class="cgl-terminal">
+user@computer:~$ ifconfig
+<span class="cgl-terminal-highlight">eth0</span>      Link encap:Ethernet  <span class="cgl-terminal-highlight">HWaddr 00:1c:42:xx:xx:xx</span>  
+          inet addr:10.111.111.111  Bcast:10.111.111.255  Mask:255.255.255.0
+          inet6 addr: fdb2:2c26:f4e4:0:xxxx:xxxx:xxxx:xxxx/64 Scope:Global
+          inet6 addr: fdb2:2c26:f4e4:0:xxxx:xxxx:xxxx:xxxx/64 Scope:Global
+          inet6 addr: fe80::21c:42ff:fe07:f6f8/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1000  Metric:1
+          RX packets:100 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:101 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:9314 (9.3 KB)  TX bytes:15671 (15.6 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:100 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:100 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:24050 (24.0 KB)  TX bytes:24050 (24.0 KB)
+
+user@computer:~$ 
+</pre>
+<p>如图所示，你的以太网 MAC 地址应该是在"eth**"一项中，"HWaddr"的后面。<b><u>请把它记下来并检查一遍!</u></b></p>
+</div>
+
+<!-- OSX 得到 mac-->
+
+<div id="osx-device">
+<h2>请选择你的 OS X 设备</h2>
+<div class="cgl-block-option large"data-target="^#osx-warn-adapter"data-value="osx-without-ethernet">
+MacBook、 MacBook Air或配备视网膜显示屏的 MacBook Pro <br/> <br/>
+<small>这些设备不具有以太网端口。你今天能买的大多数 Macbook 都属于此类型。</small>
+</div>
+<div class="cgl-block-option large"data-target="#osx-mac-0"data-value="osx-with-ethernet">
+旧的 MacBook Pro型号，Mac mini 或 Mac Pro <br/> <br/>
+<small>这些设备具有以太网端口，包括那些若干年前的厚 Macbook 和 Mac 的台式机型号。</small>
+</div>
+</div>
+
+<div id="osx-warn-adapter"data-target="#osx-mac-0"data-new-page="true">
+<h2>你的 Mac 设备没有以太网端口</h2>
+<p>看来，你的 Mac 设备没有以太网端口，需要一个适配器（即转接线）。推荐你从 <a href="http://www.apple.com/hk/shop/product/MD463ZM/A/thunderbolt-to-gigabit-ethernet-adapter"> 苹果在线商店</a>购买一个 Thunderbolt to Gigabit Ethernet Adapter，或者去又一城直接购买。</p>
+<p>或如果你有新的 MacBook，你需要一个苹果 USB 以太网适配器和 USB C 到 USB 适配器，带来不便。在这种情况下，我建议你在你的房间里安装 Wi-Fi。</p>
+</div>
+
+<div id="osx-mac-0"data-target="#osx-mac-1">
+<h2>获取你 OS X 设备的 MAC 地址</h2>
+<p>打开系统偏好设置</p>
+<img src="img/mac_apple.png"width="233"alt="Open System Preference"/>
+<p>选择"互联网"</p>
+<img src="img/mac_sp.png"class="no-shadow"width="780"alt="Choose Internet">
+</div>
+
+<div id="osx-mac-1"data-target="#open-ncm"data-new-page="true">
+<h2>选择你的以太网适配器</h2>
+< div data-for="osx-with-ethernet">
+<p>插上你的外接 Thunderbolt 或 USB 以太网适配器，然后你的适配器应该会出现在左侧列表中。选择它。</p>
+</div>
+<div data-for="osx-without-ethernet">
+<p>从在左侧的列表中选择你的以太网适配器（Ethernet Adapter）。</p>
+</div>
+<img src="img/mac_net.png"class="no-shadow"alt="Select your Ethernet Adapter">
+<p>按右下角"高级..."按钮。</p>
+<img src="img/mac_hardware.png"class="no-shadow"alt="Hardware">
+<p>在"硬件"选项卡中，你可以看到你的 MAC 地址。<b><u>请把它记下来并检查一遍!</u></b></p>
+</div>
+
+<!-- NCM -->
+
+<div id="open-ncm"data-target="#choose-residence"data-new-page="true">
+<h2>登录城大NCM</h2>
+<p>在城大校内找到有 Wi-Fi 的地方（通常 Common Room 即可）。打开NCM网站 (<a href="https://www6.cityu.edu.hk/ncm/"target="_blank"> https://www6.cityu.edu.hk/ncm/</a>) 并用城大EID和密码登录。
+</p>
+<img src="img/ncm_index.png"alt="NCM index page">
+</div>
+
+<div id="choose-residence"data-target="#form-0"data-new-page="true">
+<h2>选择"Connection in Residence"</h2>
+<p>在左边的菜单中选择"Connection in Residence"。</p>
+<img src="img/left_menu.png"width="238"alt="Choose Connection in Residence"/>
+<p>网站应该要求你同意其条款。如果你已阅读并同意，打勾并继续。</p>
+</div>
+
+<div id="form-0"data-target="#form-1">
+<h2>填写表单</h2>
+<p>此时窗口右面应该有表单。</p>
+<img src="img/form.png"width="811"alt="Form"/>
+<p>请确认你 "Residence Location" 和 "Contact Phone Number" 是正确的。</p>
+</div>
+
+<div id="form-1"data-target="#form-2">
+<h2>Network Card Address 和 Network Card Ownership 部分</h2>
+<p>在 "Network Card Address" 中，填写刚才查到的 MAC 地址并 <b><u>仔细检查</u></b>。</p>
+<div class="cgl-quote"> <table width="100%"> <tbody>
+<tr>
+<td width="38%"height="28"> <font class="text14"> *Network Card Address:</font></td>
+<td width="62%"height="28">
+<input name="MAC1"size="2"maxlength="2"value="00"style="font-family: Arial; font-size: 11pt; width: 30px"type="text">-
+<input name="MAC2"size="2"maxlength="2"value="1C"style="font-family: Arial; font-size: 11pt; width: 30px"type="text">-
+<input name="MAC3"size="2"maxlength="2"value="42"style="font-family: Arial; font-size: 11pt; width: 30px"type="text">-
+<input name="MAC4"size="2"maxlength="2"value="XX"style="font-family: Arial; font-size: 11pt; width: 30px"type="text">-
+<input name="MAC5"size="2"maxlength="2"value="XX"style="font-family: Arial; font-size: 11pt; width: 30px"type="text">-
+<input name="MAC6"size="2"maxlength="2"value="XX"style="font-family: Arial; font-size: 11pt; width: 30px"type="text">
+</tr>
+</tbody></table></div>
+<p>在 "Network Card Ownership" 部分中，选择"Self-Owned"。</p>
+<div class="cgl-quote"> <table width="100%"> <tbody><tr>
+<td width="38%"height="28"> <font class="text14"> *Network Card Ownership:</font></td>
+<td width="62%"height="28"> <select size="1"name="p_NetcardOwner">
+<option value="Self"> Self-Owned</option>
+</select></td></tr>
+</tbody></table></div>
+</div>
+
+
+
+<div id="form-2"data-target="#after-submit"data-new-page="true">
+<h2>Outlet ID 和其他选项</h2>
+<p>在 "Outlet ID" 部分中，选择你的床是在左边还是右边。</p>
+<div class="cgl-quote"> <table width="100%"> <tbody><tr>
+<td width="32%"> <font class="text14"> * Outlet ID:</font></td>
+<td width="68%"> <select name="p_outlet_id"size="1">
+<option value="14SR05-4C"> 10SR00-4 C RIGHT</option>
+</select></td>
+</tr></tbody></table>
+</div>
+<img src="img/outlet.png"width="205"alt="Outlet ID">
+<p>在"Machine Type"部分中，选择"PC"。</p>
+<div class="cgl-quote"> <table width="100%">
+<tbody><tr><td width="32%"height="27"> <font class="text14"> *Machine Type:</font></td>
+<td width="68%"height="27">
+<select name="p_machine_type"size="1">
+<option value="PC"> PC</option>
+</select></td></tr></tbody>
+</table></div>
+<p>在 "OS Type" 部分中，选择 <b><u>随便哪个</u></b> 都不会影响申请联网。但为了方便，建议你选择和你操作系统类型相同的"
+<span data-for="windows-xp"> WINDOWS XP</span>
+<span data-for="windows-7"> 7 WINDOWS</span>
+<span data-for="windows-8"> 8 WINDOWS</span>
+<span data-for="windows-10"> 10 WINDOWS</span>
+<span data-for="osx"> MAC OS</span>
+<span data-for="linux"> LINUX</span>
+"。
+</p>
+<p>在"Version"中，可以随便填写，并没有影响。例如，"10"。</p>
+<div class="cgl-quote">
+<table width="100%"> <tbody><tr>
+<td width="32%"height="28"> <font class="text14"> * OS Type:</font></td>
+<td width="68%"height="28">
+<select name="p_OS"size="1">
+<option value=""></option>
+<option>WINDOWS XP</option>
+<option>7 WINDOWS</option>
+<option>8 WINDOWS</option>
+<option>10 WINDOWS</option>
+<option>MAC OS</option>
+</select> <font class="text14"> Version</font> <input name="p_OSVersion"value="10"size="10"maxlength="32"type="text">
+</td>
+</tr></tbody></table>
+</div>
+<p>"Remarks" 留空即可。</p>
+<div class="cgl-quote"> <table width="100%"> <tbody><tr>
+<td width="32%"> <font class="text14"> Remarks:</font></td>
+<td width="68%">
+<input name="p_Remarks"value=""size="50"type="text">
+</td>
+</tr></tbody></table></div>
+<p>确认填写了所有带星号的项目并准确无误后，点击提交表单。</p>
+</div>
+
+<div id="after-submit"data-target="#finish"data-new-page="true">
+<h2>提交后</h2>
+<p>你将收到电子邮件，表示城大已收到你的申请。你需要等待即可，一般不超过几小时。</p>
+<h2>连接网线</h2>
+<p>如果你没有网线，可以考虑从好味厨买一根。</p>
+<p>如果你的书桌上有电话，请连接网线的一头到电话背面（确认电话和墙上的网线接口已经接好）。如果不是电话一侧，直接把网线一头插在墙上的网线接口。</p>
+<p data-for="osx-without-ethernet"> 将网线的另一头插入到你的 Thunderbolt 或 USB 转接线上，并连接转接线。</p>
+<p data-not-for="osx-without-ethernet"> 网线的另一边插入到你计算机的网线接口。</p>
+<img src="img/cable.png"width="354"alt="Cable">
+<p>几小时后可以测试连接。</p>
+</div>
+
+<div id="finish">
+<h2>教程已完成!</h2>
+<div class="cgl-tick"> ✓</div>
+<p>如果你有任何问题，请检查故障诊断页面。</p>
+</div>

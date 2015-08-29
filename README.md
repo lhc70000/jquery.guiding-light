@@ -14,7 +14,7 @@ It focuses on simplifing and visualizing online tutorials and "how-to"s.
 
 # Demo
 
-[Setup Network in CityU Student Residence](https://github.com/lhc70000/jquery.guiding-light)
+[Setup Network in CityU Student Residence](https://lhc70000.github.io/jquery.guiding-light/demo)
 
 # Lisence
 

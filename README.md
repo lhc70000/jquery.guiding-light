@@ -69,6 +69,7 @@ Add class `cgl-block-option` to mark a div as option, and add `data-target` to i
 The "I completed this step" button will not be added if there are any cgl-block-option in the step div.
 Remarks:
 - `data-img="(url)"` for an option can add a logo for this option.
+- Add a "^" before data-target will make next step open in next page. E.g. `data-target="^#osx"`
 - Add `large` class in an option div can make it a larger block.
 
 ### Record user's choice and deal with multiple branches

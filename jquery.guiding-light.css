@@ -123,13 +123,14 @@
     /* line 114, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
     .cgl-container .cgl-block-option img {
       height: 100px;
+      display: block;
       padding: 10px 0;
       max-width: auto;
-      margin: 0;
+      margin: 0 auto;
       border-radius: 0;
       box-shadow: none; }
 
-/* line 122, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+/* line 123, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
 .cgl-key {
   border: 1px solid #aaa;
   background-color: #eee;
@@ -138,7 +139,7 @@
   border-radius: 2px;
   padding: 0 2px; }
 
-/* line 130, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+/* line 131, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
 .cgl-code {
   font-family: consolas, monospace, san-serif;
   border: 1px solid #5b3333;
@@ -146,7 +147,7 @@
   background-color: white;
   padding: 1px 6px; }
 
-/* line 137, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+/* line 138, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
 .cgl-terminal {
   font-family: consolas, monospace, san-serif;
   text-align: left;
@@ -194,14 +195,14 @@
   100% {
     color: #eee; } }
 
-/* line 159, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+/* line 160, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
 .cgl-terminal-highlight {
   -webkit-animation: terminal-highlight 1s infinite;
   -moz-animation: terminal-highlight 1s infinite;
   -o-animation: terminal-highlight 1s infinite;
   animation: terminal-highlight 1s infinite; }
 
-/* line 162, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+/* line 163, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
 .cgl-quote {
   border-left: 2px solid #5b3333;
   text-align: left;
@@ -209,7 +210,7 @@
   margin: 5px 20px;
   background-color: #fff0dd; }
 
-/* line 169, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
+/* line 170, /Users/admin/Project/jquery.guiding-light/src/jquery.guiding-light.sass */
 .cgl-tick {
   font-size: 180px;
   color: #fff;

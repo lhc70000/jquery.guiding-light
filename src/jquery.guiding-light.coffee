@@ -1,5 +1,11 @@
 # cfcoptions : { "out": "../" }
 
+###
+jQuery-GuidingLight
+v 0.11
+by lhc (lhc199652 at gmail.com)
+###
+
 do ($ = jQuery) ->
 
     class GuidingLight
@@ -46,6 +52,7 @@ do ($ = jQuery) ->
                         container.find('.cgl-prev, .cgl-next').remove()
                         self.addClass('active')
                         self.siblings('.cgl-block-option').addClass('disabled').off('click')
+                        self.off('click')
                         gl.log.unshift(self.data 'value')
                         gl.load(target, is_new_window)            
             # nav btns

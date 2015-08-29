@@ -1,7 +1,7 @@
 # jQuery.GuidingLight
 
 Creating interactive tutorial made easy. GuidingLight is a jQuery plugin written in coffeescript and sass. 
-It focuses on simplifing and visualizing online tutorials and "how-to"s.
+It focuses on simplifying and visualizing online tutorials and "how-to"s.
 
 # Features
 

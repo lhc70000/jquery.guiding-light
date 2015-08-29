@@ -12,6 +12,10 @@ It focuses on simplifing and visualizing online tutorials and "how-to"s.
 
 (Some of them are under construction)
 
+# Demo
+
+[Setup Network in CityU Student Residence](https://github.com/lhc70000/jquery.guiding-light)
+
 # Lisence
 
 The MIT License (MIT)

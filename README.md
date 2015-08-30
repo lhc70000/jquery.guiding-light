@@ -74,13 +74,13 @@ Remarks:
 
 ### Record user's choice and deal with multiple branches
 Adding `data-value="value"` for an option can attach a string to this option, which will be **recorded until the tutorial finished**.
-Adding `data-for="value"` and `data-not-for="value"` to any elements will make this element visible only for (or not for) users who has this `value` in his history.
+Adding `data-for="value"` and `data-not-for="value"` to any elements will make this element visible only for (or not for) user who has this `value` in his history.
 For example:
 ```html
 <div id="choose-os">
-  <div class="cgl-block-option" data-target="#windows" data-value="windows">Windows</div>
-  <div class="cgl-block-option" data-target="#osx" data-value="osx">OS X</div>
-  <div class="cgl-block-option" data-target="#linux" data-value="linux">Linux</div>
+  <div class="cgl-block-option" data-target="#message" data-value="windows">Windows</div>
+  <div class="cgl-block-option" data-target="#message" data-value="osx">OS X</div>
+  <div class="cgl-block-option" data-target="#message" data-value="linux">Linux</div>
 <div>
 
 <div id="message">
